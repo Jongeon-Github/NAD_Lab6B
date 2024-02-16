@@ -11,6 +11,8 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
+#define IP 127.0.0.1
+
 int main() {
     // Winsock initilation
     WSADATA wsData;
@@ -30,11 +32,31 @@ int main() {
         return -2;
     }
 
+    // Connection
+    sockaddr_in hint;
+    hint.sin_family = AF_INET;
+    hint.sin_port = htons(3000);
+    inet_pton(AF_INET, "IP", &hint.sin_addr);
 
+    int connResult = connect(sock, (sockaddr*)&hint, sizeof(hint));
+    if (connResult == SOCKET_ERROR) {
+        std::cerr << "Unable to connect to server. error code: " << WSAGetLastError() << std::endl;
+        closesocket(sock);
+        WSACleanup();
+        return 1;
+    }
 
+    // Setting data to transmit
+    const char* msg = "hello world";
 
-
-
+    // Transfer data
+    int sendResult = send(sock, msg, strlen(msg), 0);
+    if (sendResult == SOCKET_ERROR) {
+        std::cerr << "Data cannot be sent. error code: " << WSAGetLastError() << std::endl;
+        closesocket(sock);
+        WSACleanup();
+        return 1;
+    }
 
     // Socket Shutdown
     closesocket(sock);
