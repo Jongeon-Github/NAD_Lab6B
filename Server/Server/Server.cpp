@@ -10,22 +10,27 @@
 #include <WS2tcpip.h>
 #include <windows.h> // for logging
 #include <stdlib.h>
+#include <string>
+#include <vector>
+#include <time.h>    // for a logging time
 
 
-#pragma comment(lib, "Ws2_32.lib")
 #define DEFALUT_PORT_NUMBER 8000
 #define MAXMUM_CONNECTION   3
 #define MAX_BUFFER_SIZE     1024
 
+#pragma comment(lib, "Ws2_32.lib")
+#pragma warning(disable:4996)
+
 int main() {
     
-    WSADATA wsaData;            // WSADATS: Window Socket API DATA
-    int server_fd;              // Server_File_Discriptor: Server side socket identifier
-    int new_socket;             // Identify the new socket connection (Use for client connection)
-    int valread;                // Number of read bytes will be stored
-    struct sockaddr_in address; // The information for the internet connection(IP Address, Port Number) will be stored
+    WSADATA wsaData;                       // WSADATS: Window Socket API DATA
+    unsigned int server_fd;                // Server_File_Discriptor: Server side socket identifier
+    unsigned int new_socket;               // Identify the new socket connection (Use for client connection)
+    int valread;                           // Number of read bytes will be stored
+    struct sockaddr_in address;            // The information for the internet connection(IP Address, Port Number) will be stored
     int addrlen = sizeof(address); 
-    int opt = 1;                // Represents Socket Option
+    int opt = 1;                           // Represents Socket Option
     char buffer[MAX_BUFFER_SIZE] = { 0 };  // Buffer to receive data from client
         
     // instantiate event log object & Register event source and obtain handle
@@ -78,7 +83,8 @@ int main() {
     }
 
     // Infinite loop to keep the server running
-    while (true) {
+    while (true)
+    {
         // Accept connection
         if ((new_socket = accept(server_fd, (struct sockaddr*)&address, (socklen_t*)&addrlen)) == INVALID_SOCKET) {
             perror("accept");
@@ -90,23 +96,43 @@ int main() {
         if (valread > 0) {
             buffer[valread] = '\0'; // Adds a NULL character to the end of the received data to create a string.
             std::cout << "Received data: " << buffer << std::endl;
-            // send(new_socket, data, (int)strlen(data), 0);
 
             // Log messages in event log
-            if (hEventLog != NULL) {
+            if (hEventLog != NULL) 
+            {
                 // Convert received message to a wide string
-                wchar_t wBuffer[MAX_BUFFER_SIZE];
-                MultiByteToWideChar(CP_ACP, 0, buffer, -1, wBuffer, MAX_BUFFER_SIZE);
+                wchar_t wBuffer[MAX_BUFFER_SIZE];                                       
+                MultiByteToWideChar(CP_ACP, 0, buffer, -1, wBuffer, MAX_BUFFER_SIZE); // Change the the ANIS to UTF-16
 
-                LPCWSTR lpStrings[2] = { wBuffer, NULL };
-                ReportEvent(hEventLog, EVENTLOG_INFORMATION_TYPE, 0, 0, NULL, 1, 0, lpStrings, NULL);
+                // Get current time for timestamp
+                time_t now = time(NULL);
+                struct tm* tm_info = localtime(&now);
+                wchar_t timestamp[100];
+                if (wcsftime(timestamp, sizeof(timestamp) / sizeof(wchar_t), L"%b %d %H:%M:%S", tm_info) == 0) // Formatting in month, day, hour, minute, second
+                {
+                    // wcsftime Failure handling
+                    wcscpy_s(timestamp, L"Unknown Time");
+                }
+
+                // Get the current computer hostname
+                wchar_t hostname[256];
+                DWORD size = sizeof(hostname) / sizeof(hostname[0]);
+                GetComputerNameW(hostname, &size);
+
+                // Create syslog-like message
+                wchar_t syslogMessage[MAX_BUFFER_SIZE]; // variable for saving an unicode string
+                // _snwprintf_s: This function provides the ability to format a wchar_t-based Unicode string and 
+                // write it to a buffer, and is designed to prevent security issues such as buffer overruns
+                _snwprintf_s(syslogMessage, MAX_BUFFER_SIZE, _TRUNCATE, L"%ls %ls myservice[1234]: %ls", timestamp, hostname, wBuffer); 
+
+                LPCWSTR lpStrings[2] = { syslogMessage, NULL };
+                ReportEvent(hEventLog, EVENTLOG_INFORMATION_TYPE, 0, 0, NULL, 1, 0, lpStrings, NULL);                                                                                                                                                                                        
             }
+
+            // Close the each server socket
+            closesocket(new_socket);
         }
-
-        // Close the each server socket
-        closesocket(new_socket);
     }
-
     // Close the main server socket 
     closesocket(server_fd);
     // Clean up Winsock resources
