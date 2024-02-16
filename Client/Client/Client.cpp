@@ -43,7 +43,7 @@ int main() {
         std::cerr << "Unable to connect to server. error code: " << WSAGetLastError() << std::endl;
         closesocket(sock);
         WSACleanup();
-        return 1;
+        return -3;
     }
 
     // Setting data to transmit
@@ -55,7 +55,7 @@ int main() {
         std::cerr << "Data cannot be sent. error code: " << WSAGetLastError() << std::endl;
         closesocket(sock);
         WSACleanup();
-        return 1;
+        return -4;
     }
 
     // Socket Shutdown
