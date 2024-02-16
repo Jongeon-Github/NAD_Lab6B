@@ -11,7 +11,7 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
-#define IP 127.0.0.1
+#define IP "127.0.0.1"
 
 int main() {
     // Winsock initilation
@@ -35,8 +35,8 @@ int main() {
     // Connection
     sockaddr_in hint;
     hint.sin_family = AF_INET;
-    hint.sin_port = htons(3000);
-    inet_pton(AF_INET, "IP", &hint.sin_addr);
+    hint.sin_port = htons(8000);
+    inet_pton(AF_INET, IP, &hint.sin_addr);
 
     int connResult = connect(sock, (sockaddr*)&hint, sizeof(hint));
     if (connResult == SOCKET_ERROR) {
