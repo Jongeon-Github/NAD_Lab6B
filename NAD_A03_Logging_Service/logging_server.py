@@ -16,12 +16,23 @@ LOG_SOURCE = "MyEventLog"  # Windows 이벤트 로그에 사용될 소스 이름
 def get_ip_address():
     interfaces = netifaces.interfaces() # Grab host network information and store to the variable
                                         # The network information will be stored like the below line
+                                        # [
+                                        #   {
+                                        #     'addr': '192.168.1.4',         >> IP address 
+                                        #     'netmask': '255.255.255.0',    >> Subnet Mask
+                                        #     'broadcast': '192.168.1.255'   >> Broadcast Address
+                                        #   }
+                                        # ]
+                                        # If an user wants to get IP address information from the ,
+                                        #  >> addr_info[0]['addr'] 
                                         
-    for interface in interfaces:
-        addr_info = netifaces.ifaddresses(interface).get(netifaces.AF_INET)
-        if addr_info:
-            return addr_info[0]['addr']
-    return '127.0.0.1'
+    for interface in interfaces:                                            # Iterator
+        addr_info = netifaces.ifaddresses(interface).get(netifaces.AF_INET) # netifaces.ifaddresses(interface) : return dictionary type of address inforamtion
+                                                                            # .get(netifaces.AF_INET) : Used to look up the part representing IPv4 address information in the dictionary returned 
+                                                                            # from the function. If an IPv4 address is assigned to the interface, it returns information; if not, None.
+        if addr_info:                    # If available IPv4 address is found
+            return addr_info[0]['addr']  # return that address   
+    return '127.0.0.1'                   # If a usable IP address is not found even after cycling through all the contents, the localhost address is returned.
 
 
 def log_event_to_windows(source, event_id, message):
