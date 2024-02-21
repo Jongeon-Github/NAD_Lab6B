@@ -133,6 +133,7 @@ int main() {
             closesocket(new_socket);
         }
     }
+    
     // Close the main server socket 
     closesocket(server_fd);
     // Clean up Winsock resources

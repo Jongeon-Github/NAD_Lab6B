@@ -11,7 +11,7 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
-#define IP "127.0.0.1"
+#define IP "192.168.56.1"
 
 int main() {
     // Winsock initilation
