@@ -1,0 +1,7 @@
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe.config
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.pdb
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.csproj.AssemblyReference.cache
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.csproj.CoreCompileInputs.cache
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.exe
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.pdb
