@@ -21,13 +21,15 @@ namespace NAD_A03_Logging_Client
     {
         static void Main(string[] args)
         {
+            // Test setting
+            bool Login = true; // false = request test
             // Set the all required information
-#if true
-            string serverIP = "127.0.0.1";
+#if true // true = automatic test, false = manual test
+            string serverIP = "192.168.1.86";
             int serverPort = 8000;
-            string login_ID = "testID";
-            string login_PW = "testPW";
-            string request_Filename = "example.txt";
+            string login_ID = "Chris";
+            string login_PW = "Jongeon";
+            string request_Filename = "test.txt";
 #else
             string serverIP;
             string login_ID;
@@ -38,7 +40,7 @@ namespace NAD_A03_Logging_Client
             {
                 Console.WriteLine("Enter the server IP address:");
                 serverIP = Console.ReadLine();
-            } while (!TCPIP_CMNC.IsValidIP(serverIP) || string.IsNullOrWhiteSpace(serverIP));
+            } while (!TCPCommunication.IsValidIP(serverIP) || string.IsNullOrWhiteSpace(serverIP));
 
             // Get the port number from user input
             int serverPort;
@@ -61,11 +63,9 @@ namespace NAD_A03_Logging_Client
             } while (string.IsNullOrWhiteSpace(login_PW) || login_PW.Length > 20); 
 
             // Get the filename to request from user input
-            do
-            {
-                Console.WriteLine("Enter the filename to request :");
-                request_Filename = Console.ReadLine();
-            } while (string.IsNullOrWhiteSpace(request_Filename) || !request_Filename.Contains(".")); 
+            Console.WriteLine("Enter the filename to request :");
+            request_Filename = Console.ReadLine();
+             
 #endif
 
             // Create an instance of TCPIP class
@@ -74,30 +74,39 @@ namespace NAD_A03_Logging_Client
 
             try
             {
+                Console.WriteLine("Try to Connect to server...");
+                Console.WriteLine("");
+
                 // Connect to the server
                 tcpip.ConnectToServer();
+                Console.WriteLine("## Connect to server completed! ##");
 
                 // Send message to the server
-                tcpip.SendMessage(clientInfo.LoginMessage());
+                if (Login)
+                {
+                    tcpip.SendMessage(clientInfo.LoginMessage());
+                }
+                else
+                {
+                    tcpip.SendMessage(clientInfo.RequestMessage());
+                }
+                Console.WriteLine("Send message completed!");
+                Console.WriteLine("");
                 Console.WriteLine("Listening for messages from the server...");
-                while (true)
+
+                bool isConnect = true;
+                while (isConnect)
                 {
                     try
                     {
                         // Receive a message from the server
-                        tcpip.ReceiveMessage();
-                        tcpip.ServerMessageParse(tcpip.recevedMessage);
+                        isConnect = tcpip.ReceiveMessage();
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine($"Error: {ex.ToString()}");
                         break;
                     }
-                    // Check if the user wants to exit
-                    Console.WriteLine("Press 'x' to exit, or any other key to continue...");
-                    if (Console.ReadKey().Key == ConsoleKey.X)
-                        break;
-
                     Console.WriteLine();
                 }
 
@@ -107,6 +116,7 @@ namespace NAD_A03_Logging_Client
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.ToString()}");
+                tcpip.CloseSocket();
             }
         }
     }

@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace NAD_A03_Logging_Client
@@ -58,7 +59,7 @@ namespace NAD_A03_Logging_Client
         }
 
         // Method to receive a message from the server
-        public void ReceiveMessage()
+        public bool ReceiveMessage()
         {
             try
             {
@@ -68,12 +69,19 @@ namespace NAD_A03_Logging_Client
 
                 // Convert the received data to a string and display it
                 this.recevedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+
+                byte[] bytes = Encoding.UTF8.GetBytes(this.recevedMessage);
+                int size = bytes.Length;
+
+                Console.WriteLine("Received message size : " + size);            
                 Console.WriteLine("Received message from server: " + this.recevedMessage);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.ToString()}");
+                return false;
             }
+            return true;
         }
 
         // Method to close the socket
@@ -100,35 +108,6 @@ namespace NAD_A03_Logging_Client
 
             byte tempForParsing;
             return splitValues.All(r => byte.TryParse(r, out tempForParsing));
-        }
-
-        public void ServerMessageParse(string message)
-        {
-            if (!string.IsNullOrEmpty(message))
-            {
-                if (message.StartsWith("INFO;"))
-                {
-                    SendMessage(clientInfo.RequestMessage());
-                    Console.WriteLine(message);
-                }
-                else if (message.StartsWith("NOTICE;"))
-                {
-                    SendMessage(clientInfo.LoginMessage());
-                    Console.WriteLine(message);
-                }
-                else if (message.StartsWith("WARNING;"))
-                {
-                    Console.WriteLine(message);
-                }
-                else if (message.StartsWith("ERROR;"))
-                {
-                    Console.WriteLine(message);
-                }
-            }
-            else
-            {
-                Console.WriteLine("The message is NULL or empty.");
-            }
         }
     }
 
@@ -162,12 +141,12 @@ namespace NAD_A03_Logging_Client
 
         public string LoginMessage()
         {
-            return $"{login_protocol}{login_ID};{login_PW};";
+            return $"{login_protocol}ID={login_ID}&PW={login_PW}";
         }
 
         public string RequestMessage()
         {
-            return $"{request_protocol}{request_Filename};";
+            return $"{request_protocol}{request_Filename}";
         }
 
     }
