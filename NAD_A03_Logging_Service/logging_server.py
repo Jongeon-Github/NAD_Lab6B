@@ -56,6 +56,9 @@ def main():
                    log_message = f"ERROR: Connection from {client_address} blocked due to max connections limit."
                    log_event_to_file(log_message)
                    print(log_message)
+
+                   response_message = f"ERROR;Connection_Denied"
+                   client_socket.send(response_message.encode('utf-8'))
                    client_socket.close()
                    continue
                 else:
@@ -70,28 +73,6 @@ def main():
                     
 
  # -- Server & Logging Functions ----------------------------------------------------------------------------------- #        
-def handle_client(client_socket, client_address, clientID):
-    global current_connections
-
-    with client_socket:
-        print(f"Connection from {client_address}, Client ID: {clientID}")
-        try:
-            data = client_socket.recv(BUFFER_SIZE).decode('utf-8')
-            if data:
-                log_event(client_address, data, clientID)
-        except UnicodeDecodeError as e:
-            error_message = f"Error decoding data from Client ID {clientID}: {e}"
-            print(error_message)
-            log_event(client_address, error_message, clientID)
-        except Exception as e:
-            error_message = f"General error from Client ID {clientID}: {e}"
-            print(error_message)
-            log_event(client_address, error_message, clientID)
-        finally:
-            with current_connections_lock:
-                current_connections -= 1
-            client_socket.close()
-
 # Function Name: get_ip_address()
 # Description  : This function search host internet connection and return an available IP address
 #               If an availble IP address is not found, return the localhost
@@ -117,6 +98,40 @@ def get_ip_address():
         if addr_info:                    # If available IPv4 address is found
             return addr_info[0]['addr']  # return that address   
     return '127.0.0.1'                   # If a usable IP address is not found even after cycling through all the contents, the localhost address is returned.
+
+
+def handle_client(client_socket, client_address, clientID):
+    global current_connections
+
+    with client_socket:
+        print(f"Connection from {client_address}, Client ID: {clientID}")
+        try:
+            data = client_socket.recv(BUFFER_SIZE).decode('utf-8')
+            if data:
+                # event_handle 함수로부터 반환된 결과 처리
+                event_result = event_handle(data, clientID)
+                severity_level = event_result.get("severity_level", "INFO")
+                process_result = event_result.get("process_result", "Undefined")
+
+                log_event(client_address, data, clientID)
+
+                # 클라이언트에게 응답 메시지 전송
+                response_message = f"{severity_level};{process_result}"
+                client_socket.send(response_message.encode('utf-8'))  # 클라이언트에게 메시지 전송
+
+        except UnicodeDecodeError as e:
+            error_message = f"Error decoding data from Client ID {clientID}: {e}"
+            print(error_message)
+            log_event(client_address, error_message, clientID)
+        except Exception as e:
+            error_message = f"General error from Client ID {clientID}: {e}"
+            print(error_message)
+            log_event(client_address, error_message, clientID)
+        finally:
+            with current_connections_lock:
+                current_connections -= 1
+            client_socket.close()
+
 
 
 def log_event_to_file(log_message):
@@ -146,6 +161,7 @@ def log_event(client_address, data, clientID):
     log_message = f"{severity_level}: {timestamp} {hostname} MyEventLog[1234]: Client_ID {clientID}: {data} from {client_address} - {process_result}"
     print(log_message)              # print the log message
     log_event_to_file(log_message)  # write the log message to the text file
+
 
 def event_handle(data, clientID):
     # Check if there is a semicolon in the data string
