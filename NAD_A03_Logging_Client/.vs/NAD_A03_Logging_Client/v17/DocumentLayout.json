@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0B7B268-A6A7-470A-A3EA-4745E4EA493E}|NAD_A03_Logging_Client\\NAD_A03_Logging_Client.csproj|c:\\projects\\level4\\nad_lab6_a3\\nad_a03_logging_client\\nad_a03_logging_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E74C312F-0A06-4FDE-828C-13EC1BA6D47D}|Clinet_test\\Clinet_test.csproj|c:\\projects\\level4\\nad_lab6_a3\\nad_a03_logging_client\\clinet_test\\clientinfotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E74C312F-0A06-4FDE-828C-13EC1BA6D47D}|Clinet_test\\Clinet_test.csproj|solutionrelative:clinet_test\\clientinfotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7B268-A6A7-470A-A3EA-4745E4EA493E}|NAD_A03_Logging_Client\\NAD_A03_Logging_Client.csproj|C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\nad_a03_logging_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0B7B268-A6A7-470A-A3EA-4745E4EA493E}|NAD_A03_Logging_Client\\NAD_A03_Logging_Client.csproj|solutionrelative:nad_a03_logging_client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0B7B268-A6A7-470A-A3EA-4745E4EA493E}|NAD_A03_Logging_Client\\NAD_A03_Logging_Client.csproj|C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\nad_a03_logging_client\\clientinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0B7B268-A6A7-470A-A3EA-4745E4EA493E}|NAD_A03_Logging_Client\\NAD_A03_Logging_Client.csproj|solutionrelative:nad_a03_logging_client\\clientinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClientInfoTest.cs",
+              "DocumentMoniker": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\Clinet_test\\ClientInfoTest.cs",
+              "RelativeDocumentMoniker": "Clinet_test\\ClientInfoTest.cs",
+              "ToolTip": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\Clinet_test\\ClientInfoTest.cs",
+              "RelativeToolTip": "Clinet_test\\ClientInfoTest.cs",
+              "ViewState": "AQIAABUBAAAAAAAAAAAiwC8BAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T06:01:31.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\NAD_A03_Logging_Client\\Program.cs",
               "RelativeDocumentMoniker": "NAD_A03_Logging_Client\\Program.cs",
               "ToolTip": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\NAD_A03_Logging_Client\\Program.cs",
               "RelativeToolTip": "NAD_A03_Logging_Client\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAADwvxoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T19:28:46.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientInfo.cs",
+              "DocumentMoniker": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\NAD_A03_Logging_Client\\ClientInfo.cs",
+              "RelativeDocumentMoniker": "NAD_A03_Logging_Client\\ClientInfo.cs",
+              "ToolTip": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Client\\NAD_A03_Logging_Client\\ClientInfo.cs",
+              "RelativeToolTip": "NAD_A03_Logging_Client\\ClientInfo.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAArwDoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T21:19:21.836Z",
               "EditorCaption": ""
             }
           ]
