@@ -47,7 +47,9 @@ int main() {
     }
 
     // Setting data to transmit
-    const char* msg = "hello world";
+    // const char* msg = "LOGIN;ID=Chris&PW=Jongeon";
+    // const char* msg = "REQUST;test.txt";
+    const char* msg = "REQUST;test.hello";
 
     // Transfer data
     int sendResult = send(sock, msg, strlen(msg), 0);
