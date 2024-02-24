@@ -42,3 +42,62 @@ INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 11: from ('192.168.
 INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: from ('192.168.1.167', 3295) is connected - Currentconnections: 1
 NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: WRONGtest.txt from ('192.168.1.167', 3295) - Protocol_Error
 INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: from ('192.168.1.167', 3295) is disconnected - Current connections: 0
+INFO: Feb 24 15:11:06 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7810) is connected - Currentconnections: 1
+INFO: Feb 24 15:11:06 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7810) is disconnected - Current connections: 0
+INFO: Feb 24 15:12:45 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7861) is connected - Currentconnections: 1
+INFO: Feb 24 15:12:45 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7861) is disconnected - Current connections: 0
+INFO: Feb 24 15:13:03 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7875) is connected - Currentconnections: 1
+INFO: Feb 24 15:14:03 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7905) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:14:03 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 7905) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:14:14 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7905) is disconnected - Current connections: 0
+INFO: Feb 24 15:14:32 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7925) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:14:32 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 7925) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:15:23 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7969) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:15:23 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 7969) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:15:27 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 7969) is disconnected - Current connections: 0
+INFO: Feb 24 15:15:30 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 7971) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:15:30 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 7971) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:15:30 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 7971) is disconnected - Current connections: 0
+INFO: Feb 24 15:15:31 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 7973) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:15:31 Chris-Park MyEventLog[1234]: Client_ID 3: REQUEST;test.hello from ('192.168.2.13', 7973) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:15:31 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 7973) is disconnected - Current connections: 0
+INFO: Feb 24 15:37:11 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8529) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:37:11 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8529) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:37:18 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8529) is disconnected - Current connections: 0
+INFO: Feb 24 15:38:08 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8556) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:38:08 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8556) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:38:14 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8556) is disconnected - Current connections: 0
+INFO: Feb 24 15:39:02 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8606) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:39:02 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8606) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:39:05 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 8607) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:39:05 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 8607) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:39:10 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 8608) is connected - Currentconnections: 3
+INFO: Feb 24 15:45:53 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8783) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:45:53 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8783) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:45:56 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 8785) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:45:56 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 8785) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:46:03 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 8788) is connected - Currentconnections: 3
+INFO: Feb 24 15:47:42 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8828) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:47:42 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8828) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:47:49 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 8831) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:47:49 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 8831) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:47:54 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 8832) is connected - Currentconnections: 3
+INFO: Feb 24 15:49:22 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 8878) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:49:22 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 8878) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:49:24 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 8880) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:49:24 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 8880) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:49:27 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 8881) is connected - Currentconnections: 3
+INFO: Feb 24 15:53:26 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 9047) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:53:26 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 9047) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:53:31 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 9050) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:53:31 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 9050) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:53:36 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 9051) is connected - Currentconnections: 3
+NOTICE: Feb 24 15:53:38 Chris-Park MyEventLog[1234]: Client_ID 3: REQUEST;test.hello from ('192.168.2.13', 9051) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:55:24 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.2.13', 9079) is connected - Currentconnections: 1
+NOTICE: Feb 24 15:55:24 Chris-Park MyEventLog[1234]: Client_ID 1: REQUEST;test.hello from ('192.168.2.13', 9079) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:55:25 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.2.13', 9082) is connected - Currentconnections: 2
+NOTICE: Feb 24 15:55:25 Chris-Park MyEventLog[1234]: Client_ID 2: REQUEST;test.hello from ('192.168.2.13', 9082) - Not_allowed_file_extension:hello
+INFO: Feb 24 15:55:26 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.2.13', 9083) is connected - Currentconnections: 3
+WARNING: Max connections reached. Next connections will be blocked.
+NOTICE: Feb 24 15:55:30 Chris-Park MyEventLog[1234]: Client_ID 3: REQUEST;test.hello from ('192.168.2.13', 9083) - Not_allowed_file_extension:hello
+ERROR: Connection from ('192.168.2.13', 9087) blocked due to max connections limit.

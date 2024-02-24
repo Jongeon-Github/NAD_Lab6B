@@ -1,3 +1,3 @@
 ﻿  Client.cpp
-C:\Users\ChrisPark\Desktop\Nework\NAD_Logging_System\Client\Client\Client.cpp(55,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ChrisPark\Desktop\Nework\NAD_Logging_System\Client\Client\Client.cpp(57,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   Client.vcxproj -> C:\Users\ChrisPark\Desktop\Nework\NAD_Logging_System\Client\x64\Debug\Client.exe

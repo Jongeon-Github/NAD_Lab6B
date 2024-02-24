@@ -34,7 +34,6 @@ TEST_PW = "Jongeon"
 TEST_FILE_NAME = "test.txt"
 TEST_INVALID_FILE_NAME = "cannot_open.txt"
 TEST_FILE_EXTENTIONS = {"txt", "pdf", "jpg", "png"}
-TEST_LIMIT_TIME = 60
 # ----------------------------------------------------------------------------------------------------------------- #
 
 
@@ -60,10 +59,9 @@ def main():
         "Check whether the current number of clients are reached to the maximum or not"
         "If so, log to it as a 'WARNING'"
         while True:
-            if current_connections >= MAX_CONNECTIONS:
+            if current_connections == MAX_CONNECTIONS:
                # WARNING Leaves a log and does not block further access (just warns)
-               with log_file_lock:
-                   log_event_to_file("WARNING: Max connections reached. Next connections will be blocked.")
+               log_event_to_file("WARNING: Max connections reached. Next connections will be blocked.")
                print("WARNING: Max connections reached. Next connections will be blocked.")
 
             client_socket, client_address = server_socket.accept()
@@ -209,8 +207,9 @@ def log_event(client_socket, client_address, data, clientID):
 
     # Extract the severity_level and process_result from the event_result
     event_result = event_handle(data, clientID)
-    severity_level = event_result.get("severity_level", "INFO")      # Default to INFO if not specified
-    process_result = event_result.get("process_result", "Undefined") # Default to Undefined if not specified
+    if event_result:
+        severity_level = event_result.get("severity_level", "INFO")      # Default to INFO if not specified
+        process_result = event_result.get("process_result", "Undefined") # Default to Undefined if not specified
 
     # Set the log message format
     log_message = f"{severity_level}: {timestamp} {hostname} MyEventLog[1234]: Client_ID {clientID}: {data} from {client_address} - {process_result}"
@@ -230,11 +229,16 @@ def log_event_to_file(log_message):
     """
     write the log message to the text file
     """
-    global log_file_lock    # Prevent simultaneous access to resources (text files)
-    with log_file_lock:
+    global log_file_lock
+    try:
+        log_file_lock.acquire()  # 잠금 획득
         with open(LOG_FILE, "a") as log_file:
             log_file.write(log_message + "\n")
             print(f"Logged to file: {log_message}")
+    except Exception as e:
+        print(f"Error writing to log file: {e}")
+    finally:
+        log_file_lock.release()
 
 
 # Function Name: event_handle()
@@ -252,7 +256,7 @@ def log_event_to_file(log_message):
 #                 2. File Request Validation                                             
 #                   >> Firstly it checks wheter the flag(first block of the packet) is 'REQUEST' or not
 #                   >> If so, extract the file extention and check whether it is valid or not
-#                     >> If the client request an invalid extention of file, returns 'NOTICE' as severity_level and 'Not_allowed_file_extension:{file_extension}' as proccess_result 
+#                     >> If the client request an invalid extension of file, returns 'NOTICE' as severity_level and 'Not_allowed_file_extension:{file_extension}' as proccess_result 
 #                   >> If the client requests a file with a valid file extension, check whether the file exists in the directory 
 #                     >> If the file exists, returns 'INFO' as severity_level and 'File_Sent' as proccess_result
 #                     >> If the file exists but you do not have access rights, 'ERROR' as severity_level and 'Access_Denied' as proccess_result  

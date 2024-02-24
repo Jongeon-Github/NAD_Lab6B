@@ -22,3 +22,5 @@ C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clin
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clinet_t.7DB1E4AE.Up2Date
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clinet_test.dll
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clinet_test.pdb
+C:\Users\ChrisPark\Desktop\Nework\NAD_Logging_System\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clinet_test.dll
+C:\Users\ChrisPark\Desktop\Nework\NAD_Logging_System\NAD_A03_Logging_Client\Clinet_test\obj\Debug\Clinet_test.pdb

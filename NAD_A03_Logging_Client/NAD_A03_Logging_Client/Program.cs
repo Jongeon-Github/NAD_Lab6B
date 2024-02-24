@@ -34,7 +34,7 @@ namespace NAD_A03_Logging_Client
             bool Login = true; // false = request test
             // Set the all required information
 #if true // true = automatic test, false = manual test
-            string serverIP = "192.168.1.86";
+            string serverIP = "192.168.2.13";
             int serverPort = 8000;
             string login_ID = "Chris";
             string login_PW = "Jongeon";
