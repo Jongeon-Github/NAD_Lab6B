@@ -11,7 +11,7 @@
 
 #pragma comment(lib, "ws2_32.lib")
 
-#define IP "127.0.0.1"
+#define IP "192.168.56.1"
 
 int main() {
     // Winsock initilation
@@ -47,7 +47,9 @@ int main() {
     }
 
     // Setting data to transmit
-    const char* msg = "hello world";
+    // const char* msg = "LOGIN;ID=Chris&PW=Jongeon";
+    // const char* msg = "REQUST;test.txt";
+    const char* msg = "REQUST;test.hello";
 
     // Transfer data
     int sendResult = send(sock, msg, strlen(msg), 0);

@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4312F775-1502-428C-A761-30A62B27E742}|NAD_A03_Logging_Service\\NAD_A03_Logging_Service.csproj|c:\\projects\\level4\\nad_lab6_a3\\nad_a03_logging_service\\nad_a03_logging_service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4312F775-1502-428C-A761-30A62B27E742}|NAD_A03_Logging_Service\\NAD_A03_Logging_Service.csproj|solutionrelative:nad_a03_logging_service\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Service\\NAD_A03_Logging_Service\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NAD_A03_Logging_Service\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,10 +24,8 @@
               "RelativeDocumentMoniker": "NAD_A03_Logging_Service\\Program.cs",
               "ToolTip": "C:\\Projects\\Level4\\NAD_Lab6_A3\\NAD_A03_Logging_Service\\NAD_A03_Logging_Service\\Program.cs",
               "RelativeToolTip": "NAD_A03_Logging_Service\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T19:27:43.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T19:27:43.782Z"
             }
           ]
         }

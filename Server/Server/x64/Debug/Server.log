@@ -1,0 +1,4 @@
+﻿  Server.cpp
+C:\Users\ChrisPark\Desktop\Nework\NAD_Lab6B\Server\Server\Server.cpp(52,28): warning C4244: '=': conversion from 'SOCKET' to 'unsigned int', possible loss of data
+C:\Users\ChrisPark\Desktop\Nework\NAD_Lab6B\Server\Server\Server.cpp(89,33): warning C4244: '=': conversion from 'SOCKET' to 'unsigned int', possible loss of data
+  Server.vcxproj -> C:\Users\ChrisPark\Desktop\Nework\NAD_Lab6B\Server\x64\Debug\Server.exe

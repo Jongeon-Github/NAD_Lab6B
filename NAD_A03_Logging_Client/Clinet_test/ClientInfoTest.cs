@@ -7,11 +7,11 @@ namespace Clinet_test
     [TestClass]
     public class ClientInfoTest
     {
-        string serverIP = "192.168.1.86";
+        string serverIP = "192.168.2.18";
         int serverPort = 8000;
 
         [TestMethod]
-        public void LoginMessage_true()
+        public void LoginMessage_True()
         {
             // Arrange
             bool expectedPacket = false;
@@ -37,7 +37,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_true()
+        public void RequestMessage_True()
         {
             // Arrange
             bool expectedPacket = false;
@@ -63,7 +63,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void LoginMessage_wrongPW()
+        public void LoginMessage_WrongPW()
         {
             // Arrange
             bool expectedPacket = false;
@@ -89,7 +89,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void LoginMessage_wrongProtocol()
+        public void LoginMessage_WrongProtocol()
         {
             // Arrange
             bool expectedPacket = false;
@@ -116,7 +116,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_wrongProtocol()
+        public void RequestMessage_WrongProtocol()
         {
             // Arrange
             bool expectedPacket = false;
@@ -143,7 +143,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_withoutFilename()
+        public void RequestMessage_WithoutFilename()
         {
             // Arrange
             bool expectedPacket = false;
@@ -169,7 +169,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_withoutExtension()
+        public void RequestMessage_WithoutExtension()
         {
             // Arrange
             bool expectedPacket = false;
@@ -195,7 +195,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_wrongExtension()
+        public void RequestMessage_WrongExtension()
         {
             // Arrange
             bool expectedPacket = false;
@@ -221,7 +221,7 @@ namespace Clinet_test
         }
 
         [TestMethod]
-        public void RequestMessage_noFile()
+        public void RequestMessage_NonExistentFile()
         {
             // Arrange
             bool expectedPacket = false;
