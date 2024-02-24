@@ -1,0 +1,44 @@
+INFO: Feb 23 17:27:44 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.1.167', 3115) is connected - Currentconnections: 1
+INFO: Feb 23 17:32:29 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.1.167', 3267) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:32:29 Chris-Park MyEventLog[1234]: Client_ID 1: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3267) - Invalid_ID_or_PW
+NOTICE: Feb 23 17:32:49 Chris-Park MyEventLog[1234]: Client_ID 1: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3267) - Invalid_ID_or_PW
+INFO: Feb 23 17:33:01 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.1.167', 3279) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:01 Chris-Park MyEventLog[1234]: Client_ID 1: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3279) - Invalid_ID_or_PW
+NOTICE: Feb 23 17:33:01 Chris-Park MyEventLog[1234]: Client_ID 1: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3279) - Invalid_ID_or_PW
+WARNING: Feb 23 17:33:01 Chris-Park MyEventLog[1234]: Client_ID 1: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3279) - Too_Many_Failed_Attempts
+INFO: Feb 23 17:33:01 Chris-Park MyEventLog[1234]: Client_ID 1: from ('192.168.1.167', 3279) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.1.167', 3285) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 2: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3285) - Invalid_ID_or_PW
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 2: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3285) - Invalid_ID_or_PW
+WARNING: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 2: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3285) - Too_Many_Failed_Attempts
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 2: from ('192.168.1.167', 3285) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.1.167', 3286) is connected - Currentconnections: 1
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 3: LOGIN;ID=Chris&PW=Jongeon from ('192.168.1.167', 3286) - Login_Success
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 3: from ('192.168.1.167', 3286) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 4: from ('192.168.1.167', 3287) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 4: LOGIN;ID=Chris&PW=wrong from ('192.168.1.167', 3287) - Invalid_ID_or_PW
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 4: from ('192.168.1.167', 3287) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 5: from ('192.168.1.167', 3288) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 5: WRONGID=Chris&PW=wrong from ('192.168.1.167', 3288) - Protocol_Error
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 5: from ('192.168.1.167', 3288) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 6: from ('192.168.1.167', 3289) is connected - Currentconnections: 1
+ERROR: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 6: REQUEST;cannot_open.txt from ('192.168.1.167', 3289) - Access_Denied
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 6: from ('192.168.1.167', 3289) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 7: from ('192.168.1.167', 3290) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 7: REQUEST;appleSecurity.txt from ('192.168.1.167', 3290) - File_Not_Found
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 7: from ('192.168.1.167', 3290) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 8: from ('192.168.1.167', 3291) is connected - Currentconnections: 1
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 8: REQUEST;test.txt from ('192.168.1.167', 3291) - File_Sent
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 8: from ('192.168.1.167', 3291) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 9: from ('192.168.1.167', 3292) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 9: REQUEST;test from ('192.168.1.167', 3292) - Not allowed_file_extension: test
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 9: from ('192.168.1.167', 3292) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 10: from ('192.168.1.167', 3293) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 10: REQUEST; from ('192.168.1.167', 3293) - Not allowed_file_extension: 
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 10: from ('192.168.1.167', 3293) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 11: from ('192.168.1.167', 3294) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 11: REQUEST;test.abc from ('192.168.1.167', 3294) - Not allowed_file_extension: abc
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 11: from ('192.168.1.167', 3294) is disconnected - Current connections: 0
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: from ('192.168.1.167', 3295) is connected - Currentconnections: 1
+NOTICE: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: WRONGtest.txt from ('192.168.1.167', 3295) - Protocol_Error
+INFO: Feb 23 17:33:28 Chris-Park MyEventLog[1234]: Client_ID 12: from ('192.168.1.167', 3295) is disconnected - Current connections: 0
