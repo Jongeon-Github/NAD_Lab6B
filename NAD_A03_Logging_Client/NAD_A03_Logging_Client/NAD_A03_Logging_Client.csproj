@@ -45,6 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="ClientInfo.cs" />
+>>>>>>> 6e3aa415a13b3d18f5f945ff045824ad20bd00b4
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

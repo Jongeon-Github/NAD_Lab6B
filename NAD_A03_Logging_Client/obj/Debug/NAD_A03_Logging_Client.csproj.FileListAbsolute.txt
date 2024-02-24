@@ -1,3 +1,4 @@
+<<<<<<< HEAD:NAD_A03_Logging_Client/NAD_A03_Logging_Client/obj/Debug/NAD_A03_Logging_Client.csproj.FileListAbsolute.txt
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe.config
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.pdb
@@ -5,3 +6,12 @@ C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.csproj.CoreCompileInputs.cache
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.exe
 C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.pdb
+=======
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe.config
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.exe
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\bin\Debug\NAD_A03_Logging_Client.pdb
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.csproj.AssemblyReference.cache
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.csproj.CoreCompileInputs.cache
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.exe
+C:\Projects\Level4\NAD_Lab6_A3\NAD_A03_Logging_Client\NAD_A03_Logging_Client\obj\Debug\NAD_A03_Logging_Client.pdb
+>>>>>>> ad36e6157a60f564b55465471852404daf5ce7e7:NAD_A03_Logging_Client/obj/Debug/NAD_A03_Logging_Client.csproj.FileListAbsolute.txt
